@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أحمد محمود | Ahmed Mahmoud</title>
+    <title>أحمد محمود عبدالشافي | Ahmed Mahmoud</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
@@ -12,6 +12,7 @@
             --neon-green: #CBFF20;
             --pure-white: #FFFFFF;
             --pure-black: #000000;
+            --light-navy: #111A4D; /* لون جديد أخف قليلاً لتمييز الأقسام */
         }
 
         body {
@@ -23,27 +24,35 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             min-height: 100vh;
-            text-align: center;
         }
 
         header {
             width: 100%;
             background-color: var(--pure-black);
             padding: 15px 0;
-            position: absolute;
-            top: 0;
             border-bottom: 3px solid var(--neon-green);
             display: flex;
             justify-content: center;
             align-items: center;
+            position: fixed; /* لجعل الشريط العلوي ثابتاً عند النزول */
+            top: 0;
+            z-index: 1000;
         }
 
         /* تنسيق صورة اللوجو */
         .logo {
-            height: 120px; /* يمكنك تكبير أو تصغير اللوجو بتغيير هذا الرقم */
+            height: 90px; /* يمكنك تعديل هذا الرقم كما فعلت سابقاً */
             width: auto;
+        }
+
+        /* تنسيق القسم الرئيسي */
+        .hero {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
         }
 
         h1 {
@@ -53,12 +62,48 @@
             margin-bottom: 10px;
         }
 
-        p {
+        .hero p {
             font-size: 1.2rem;
             line-height: 1.8;
             max-width: 600px;
             margin: 0 auto 30px auto;
+        }
+
+        /* تنسيق قسم نبذة عني */
+        .about-section {
+            background-color: var(--light-navy);
+            width: 100%;
+            padding: 60px 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-top: 1px solid rgba(203, 255, 32, 0.2);
+        }
+
+        .about-section h2 {
             color: var(--pure-white);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .about-content {
+            max-width: 800px;
+            background-color: var(--dark-navy);
+            padding: 40px;
+            border-radius: 10px;
+            border-right: 4px solid var(--neon-green); /* لمسة جمالية بالأخضر */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: right;
+            line-height: 1.9;
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        .about-content span {
+            color: var(--neon-green);
+            font-weight: bold;
         }
 
         .btn {
@@ -72,6 +117,7 @@
             border-radius: 5px;
             transition: 0.3s;
             border: 2px solid var(--neon-green);
+            margin-top: 20px;
         }
 
         .btn:hover {
@@ -90,16 +136,28 @@
 <body>
 
     <header>
-        <!-- تم استدعاء صورة اللوجو هنا -->
         <img src="logo.png" alt="Ahmed Mahmoud Logo" class="logo">
     </header>
 
-    <main style="padding-top: 100px; padding-left: 20px; padding-right: 20px;">
+    <!-- القسم الرئيسي -->
+    <main class="hero">
         <h1>أهلاً بك في عالمي</h1>
         <div class="grid-line"></div>
-        <p>هذا هو الإصدار الجديد من موقعي. تم تصميمه باستخدام ألوان هويتي البصرية ليعكس طابعي الشخصي والاحترافي.</p>
-        <a href="#" class="btn">شاهد أعمالي</a>
+        <p>مرحباً بك في مساحتي الرقمية، حيث تلتقي الأصالة مع الابتكار.</p>
+        <a href="#about" class="btn">تعرف عليّ أكثر</a>
     </main>
+
+    <!-- قسم نبذة عني الجديد -->
+    <section id="about" class="about-section">
+        <h2>نبذة عني</h2>
+        <div class="grid-line" style="width: 60px;"></div>
+        
+        <div class="about-content">
+            <p>مرحباً، أنا <span>أحمد محمود عبدالشافي</span>. أجمع في مسيرتي بين عراقة الماضي وتقنيات المستقبل.</p>
+            <p>كطالب آثار، أمتلك شغفاً عميقاً بالتاريخ وعلم المصريات واكتشاف التفاصيل الفنية الدقيقة في الفنون القديمة. وفي الوقت ذاته، تستهويني التكنولوجيا والإبداع الرقمي بشكل كبير.</p>
+            <p>أعمل على تطوير مهاراتي باستمرار في مجالات <span>المونتاج وتحرير الفيديو</span> (باستخدام برامج مثل Premiere Pro و After Effects)، بالإضافة إلى اهتمامي الواسع بأحدث <span>أدوات الذكاء الاصطناعي</span> والتكنولوجيا، مما يتيح لي دمج النظرة الفنية التحليلية مع الأدوات الحديثة لإنتاج أعمال إبداعية ومبتكرة.</p>
+        </div>
+    </section>
 
 </body>
 </html>
