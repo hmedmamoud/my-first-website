@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>أحمد محمود | Ahmed Mahmoud</title>
-    <!-- استدعاء خط مقارب لـ Lemon Milk من جوجل -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
-        /* تعريف ألوان هويتك البصرية */
         :root {
             --dark-navy: #080F34;
             --neon-green: #CBFF20;
@@ -16,7 +14,6 @@
             --pure-black: #000000;
         }
 
-        /* تنسيق الصفحة بالكامل */
         body {
             background-color: var(--dark-navy);
             color: var(--pure-white);
@@ -31,24 +28,24 @@
             text-align: center;
         }
 
-        /* تنسيق الشريط العلوي */
         header {
             width: 100%;
             background-color: var(--pure-black);
-            padding: 20px 0;
+            padding: 15px 0;
             position: absolute;
             top: 0;
             border-bottom: 3px solid var(--neon-green);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        header h2 {
-            margin: 0;
-            font-weight: 900;
-            letter-spacing: 2px;
-            font-size: 1.8rem;
+        /* تنسيق صورة اللوجو */
+        .logo {
+            height: 45px; /* يمكنك تكبير أو تصغير اللوجو بتغيير هذا الرقم */
+            width: auto;
         }
 
-        /* تنسيق النصوص */
         h1 {
             color: var(--neon-green);
             font-weight: 900;
@@ -64,7 +61,6 @@
             color: var(--pure-white);
         }
 
-        /* تنسيق الزر */
         .btn {
             display: inline-block;
             background-color: var(--neon-green);
@@ -83,7 +79,6 @@
             color: var(--neon-green);
         }
 
-        /* خط زينة مستوحى من اللوجو */
         .grid-line {
             width: 100px;
             height: 6px;
@@ -95,7 +90,8 @@
 <body>
 
     <header>
-        <h2>AHMED <span style="color: var(--neon-green);">MAHMOUD</span></h2>
+        <!-- تم استدعاء صورة اللوجو هنا -->
+        <img src="logo.png" alt="Ahmed Mahmoud Logo" class="logo">
     </header>
 
     <main style="padding-top: 100px; padding-left: 20px; padding-right: 20px;">
